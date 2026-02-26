@@ -32,31 +32,7 @@
 | Работа с Excel | Apache POI 5.2.5 |
 | Хеширование паролей | jBCrypt 0.4 |
 
-## 📊 Структура базы данных
-
-┌─────────────┐ ┌─────────────┐ ┌─────────────┐
-│ users │ │ orders │ │pickup_points│
-├─────────────┤ ├─────────────┤ ├─────────────┤
-│ id (PK) │<─────│ user_id │ │ id (PK) │
-│ full_name │ │ order_number│ │ address │
-│ login (UQ) │ │ order_date │ └─────────────┘
-│ password │ │ delivery_date│ ▲
-│ role │ │ pickup_point_id│───────┘
-└─────────────┘ │ pickup_code │ ┌─────────────┐
-│ status │ │ products │
-└─────────────┘ ├─────────────┤
-│ │ article(PK) │
-▼ │ name │
-┌─────────────┐ │ price │
-│ order_items │ │ discount │
-├─────────────┤ │ stock │
-│ id (PK) │ │ ... │
-│ order_id │─────>│ photo_path │
-│ product_article│───>└─────────────┘
-│ quantity │
-│ price_at_order│
-└─────────────┘
-text
+ER-Диаграмма(DE.pdf)
 
 ## 👥 Роли пользователей
 
