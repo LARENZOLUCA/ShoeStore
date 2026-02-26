@@ -1,0 +1,14 @@
+C:\Users\AlexGG\IdeaProjects\ShoeStore\src\main\java\com\shoestore\controller.java
+C:\Users\AlexGG\IdeaProjects\ShoeStore\src\main\java\com\shoestore\dao\UserDAO.java
+C:\Users\AlexGG\IdeaProjects\ShoeStore\src\main\java\com\shoestore\importer\ExcelReader.java
+C:\Users\AlexGG\IdeaProjects\ShoeStore\src\main\java\com\shoestore\importer\TestImport.java
+C:\Users\AlexGG\IdeaProjects\ShoeStore\src\main\java\com\shoestore\importer\UserImporter.java
+C:\Users\AlexGG\IdeaProjects\ShoeStore\src\main\java\com\shoestore\Main.java
+C:\Users\AlexGG\IdeaProjects\ShoeStore\src\main\java\com\shoestore\model\Order.java
+C:\Users\AlexGG\IdeaProjects\ShoeStore\src\main\java\com\shoestore\model\OrderItem.java
+C:\Users\AlexGG\IdeaProjects\ShoeStore\src\main\java\com\shoestore\model\PickupPoint.java
+C:\Users\AlexGG\IdeaProjects\ShoeStore\src\main\java\com\shoestore\model\Product.java
+C:\Users\AlexGG\IdeaProjects\ShoeStore\src\main\java\com\shoestore\model\User.java
+C:\Users\AlexGG\IdeaProjects\ShoeStore\src\main\java\com\shoestore\service.java
+C:\Users\AlexGG\IdeaProjects\ShoeStore\src\main\java\com\shoestore\util\HibernateUtil.java
+C:\Users\AlexGG\IdeaProjects\ShoeStore\src\main\java\com\shoestore\view.java

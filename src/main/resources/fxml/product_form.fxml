@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.shoestore.controller.ProductFormController"
+            fitToWidth="true" style="-fx-background-color: #FFFFFF;">
+
+    <VBox spacing="15" style="-fx-background-color: #FFFFFF; -fx-padding: 20;">
+        <padding>
+            <Insets top="20" right="30" bottom="20" left="30"/>
+        </padding>
+
+        <!-- Заголовок формы -->
+        <Label fx:id="formTitle" style="-fx-font-size: 20px; -fx-font-weight: bold;">
+            <font>
+                <Font name="Times New Roman" size="20"/>
+            </font>
+        </Label>
+
+        <!-- Основные поля -->
+        <GridPane hgap="15" vgap="10">
+            <columnConstraints>
+                <ColumnConstraints minWidth="120" prefWidth="120"/>
+                <ColumnConstraints hgrow="ALWAYS" minWidth="200"/>
+            </columnConstraints>
+
+            <!-- Артикул (только для чтения при редактировании) -->
+            <Label text="Артикул:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="articleField" GridPane.rowIndex="0" GridPane.columnIndex="1"
+                       promptText="Например: A112T4" style="-fx-font-family: 'Times New Roman';"/>
+
+            <!-- Наименование -->
+            <Label text="Наименование:*" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="nameField" GridPane.rowIndex="1" GridPane.columnIndex="1"
+                       promptText="Введите наименование товара" style="-fx-font-family: 'Times New Roman';"/>
+
+            <!-- Категория -->
+            <Label text="Категория:*" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <ComboBox fx:id="categoryCombo" GridPane.rowIndex="2" GridPane.columnIndex="1"
+                      editable="true" promptText="Выберите или введите категорию"
+                      style="-fx-font-family: 'Times New Roman';"/>
+
+            <!-- Производитель -->
+            <Label text="Производитель:*" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <ComboBox fx:id="manufacturerCombo" GridPane.rowIndex="3" GridPane.columnIndex="1"
+                      editable="true" promptText="Выберите или введите производителя"
+                      style="-fx-font-family: 'Times New Roman';"/>
+
+            <!-- Поставщик -->
+            <Label text="Поставщик:*" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+            <ComboBox fx:id="supplierCombo" GridPane.rowIndex="4" GridPane.columnIndex="1"
+                      editable="true" promptText="Выберите или введите поставщика"
+                      style="-fx-font-family: 'Times New Roman';"/>
+
+            <!-- Единица измерения -->
+            <Label text="Ед. измерения:*" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+            <ComboBox fx:id="unitCombo" GridPane.rowIndex="5" GridPane.columnIndex="1"
+                      editable="true" promptText="Выберите или введите единицу измерения"
+                      style="-fx-font-family: 'Times New Roman';"/>
+
+            <!-- Цена -->
+            <Label text="Цена:*" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+            <TextField fx:id="priceField" GridPane.rowIndex="6" GridPane.columnIndex="1"
+                       promptText="0.00" style="-fx-font-family: 'Times New Roman';"/>
+
+            <!-- Количество на складе -->
+            <Label text="Количество:*" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+            <TextField fx:id="stockField" GridPane.rowIndex="7" GridPane.columnIndex="1"
+                       promptText="0" style="-fx-font-family: 'Times New Roman';"/>
+
+            <!-- Скидка -->
+            <Label text="Скидка %:" GridPane.rowIndex="8" GridPane.columnIndex="0"/>
+            <TextField fx:id="discountField" GridPane.rowIndex="8" GridPane.columnIndex="1"
+                       promptText="0" style="-fx-font-family: 'Times New Roman';"/>
+        </GridPane>
+
+        <!-- Описание -->
+        <Label text="Описание:" style="-fx-font-weight: bold;"/>
+        <TextArea fx:id="descriptionArea" promptText="Введите описание товара"
+                  wrapText="true" prefRowCount="4" style="-fx-font-family: 'Times New Roman';"/>
+
+        <!-- Фото товара -->
+        <Label text="Фото товара:" style="-fx-font-weight: bold;"/>
+        <HBox spacing="15" alignment="CENTER_LEFT">
+            <ImageView fx:id="imageView" fitHeight="150" fitWidth="150" preserveRatio="true"
+                       style="-fx-border-color: #CCCCCC; -fx-border-width: 1;"/>
+            <VBox spacing="10">
+                <Button text="Выбрать фото" onAction="#handleChooseImage"
+                        style="-fx-background-color: #7FFF00; -fx-text-fill: black;"/>
+                <Button text="Удалить фото" onAction="#handleDeleteImage"
+                        style="-fx-background-color: #FF6B6B; -fx-text-fill: black;"/>
+                <Label text="Рекомендуемый размер: 300x200" style="-fx-text-fill: #666666; -fx-font-size: 10px;"/>
+            </VBox>
+        </HBox>
+
+        <!-- Кнопки действий -->
+        <HBox spacing="10" alignment="CENTER_RIGHT">
+            <Button text="Сохранить" onAction="#handleSave"
+                    style="-fx-background-color: #00FA9A; -fx-text-fill: black; -fx-font-weight: bold;"/>
+            <Button text="Отмена" onAction="#handleCancel"
+                    style="-fx-background-color: #7FFF00; -fx-text-fill: black;"/>
+        </HBox>
+
+        <!-- Поле для ошибок -->
+        <Label fx:id="errorLabel" textFill="red" wrapText="true" alignment="CENTER"/>
+
+    </VBox>
+</ScrollPane>
