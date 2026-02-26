@@ -1,7 +1,3 @@
-<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" style="height:64px;margin-right:32px"/>
-
-# ```markdown
-
 # ShoeStore - Информационная система магазина обуви
 
 ![Java](https://img.shields.io/badge/Java-24-007396?style=for-the-badge&logo=java)
