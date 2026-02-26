@@ -1,9 +1,4 @@
 
-# 📝 Создайте файл README.md в корне проекта
-
-Файл: C:\Users\AlexGG\IdeaProjects\ShoeStore\README.md
-markdown
-
 # ShoeStore - Информационная система магазина обуви
 
 ![Java](https://img.shields.io/badge/Java-24-007396?style=for-the-badge&logo=java)
